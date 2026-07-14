@@ -1,0 +1,28 @@
+name: dim_mobile
+description: DIM — 4CH 측정 프로그램 (Android, FTDI USB OTG)
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  # FTDI / CP210x / CH34x / PL2303 / CDC-ACM 등 USB OTG 시리얼 통신
+  usb_serial: ^0.5.1
+  # R1~R4 실시간 그래프 (엔지니어 모드)
+  fl_chart: ^0.68.0
+  # 환경설정(포트/영점명령어/공차 등) 영속 저장 — 데스크톱의 dim_settings.json 대응
+  shared_preferences: ^2.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/logo.png
